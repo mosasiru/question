@@ -1,0 +1,27 @@
+<h1>Listing qs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @questions.each do |q| %>
+  <tr>
+    <td><%= q.name %></td>
+    <td><%= q.title %></td>
+    <td><%= q.content %></td>
+    <td><%= link_to 'Show', q.id %></td>
+    <%#*<td><%= link_to 'Edit', edit_q_path(q) %></td>%>
+    <%#*<td><%= link_to 'Destroy', q, confirm: 'Are you sure?', method: :delete %></td>%>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New q', :controller=>'home',:action=>'new' %>
